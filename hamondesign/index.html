@@ -111,6 +111,21 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem}
 .review-slot p{color:var(--muted);margin:0}
 .review-slot .tag{display:inline-block;font-size:.8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2em .8em;margin-bottom:14px;color:var(--muted)}
 .reviewcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reviewcards.n2{grid-template-columns:repeat(2,1fr)}
+.reviewcards.n1{grid-template-columns:minmax(0,680px)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:-4px}
+.score b{font-size:2.4rem;font-weight:600;line-height:1}
+.score .stars{margin:0}
+.rate{position:relative;display:inline-block;line-height:0}
+.rate .stars{flex-wrap:nowrap;white-space:nowrap}
+.rate .bg{color:#d9dfdb}
+.rate .fg{position:absolute;left:0;top:0;overflow:hidden}
+.rate .icon{width:1.25em;height:1.25em}
+.score>span:last-child{color:var(--muted)}
+.rate .fg{color:#f2b01e}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{display:block;width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:24px;background:var(--soft)}
+.hero .photo-tag{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.72rem;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:.2em .7em}
 .review{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .review p{color:var(--ink)}
 .review b{display:block;font-weight:500}
@@ -156,7 +171,10 @@ footer a{color:#b9c6bd}
   .hero .actions .btn{flex:1 1 100%;justify-content:center}
   .hero .actions .btn-line{display:none}
   section{padding:60px 0}
-  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards{grid-template-columns:1fr}
+  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards,.reviewcards.n2,.reviewcards.n1{grid-template-columns:1fr}
+  .map{height:260px}
+  .hero .photo-tag{bottom:auto;top:12px}
+  .review-links .btn{flex:1 1 100%;justify-content:center}
   .quote,.reviews,.about{grid-template-columns:1fr;gap:32px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery img:first-child:nth-last-child(odd){grid-column:span 2}
@@ -187,7 +205,8 @@ footer a{color:#b9c6bd}
   </div>
 </header>
 
-<section class="hero plain" style="padding:0">
+<section class="hero" style="padding:0">
+  <img src="web/soft-gmaps-06.jpg" alt="Slate-clad house in the snow" style="--pos:35% 50%;--posm:30% 50%">
   
   <div class="wrap">
     <div class="hero-text">
@@ -230,7 +249,7 @@ footer a{color:#b9c6bd}
 <section id="work" class="soft">
   <div class="wrap">
     <div class="intro"><h2>Our work</h2><p>A few of the nearly 700 projects we&#x27;ve designed since 1985.</p></div>
-    <div class="gallery"><img src="web/112-1259_IMG.JPG" alt="Former factory converted to homes in Penmaenmawr" style="object-position:50% 50%"><img src="web/cae_america.jpg" alt="Split-level timber framed house in Llanfairfechan"><img src="web/IMG_2329.JPG" alt="Loft conversion to a bungalow in Glan Conwy"><img src="web/maen_alaw.jpg" alt="Building changed to a drop-in arts centre in Penmaenmawr"><img src="web/13-04-2012_13-59-24.jpg" alt="Agricultural worker&#x27;s house in Penmaenmawr"><img src="web/100_0097_IMG.JPG" alt="New shower block at a caravan park in Dwygyfylchi"></div>
+    <div class="gallery"><img src="web/112-1259_IMG.JPG" alt="Former factory converted to homes in Penmaenmawr" style="object-position:50% 50%"><img src="web/gmaps-01.jpg" alt="Stone cottages around a paved courtyard"><img src="web/IMG_2329.JPG" alt="Loft conversion to a bungalow in Glan Conwy"><img src="web/maen_alaw.jpg" alt="Building changed to a drop-in arts centre in Penmaenmawr"><img src="web/gmaps-11.jpg" alt="New brick house with an integral garage"><img src="web/100_0097_IMG.JPG" alt="New shower block at a caravan park in Dwygyfylchi"></div>
   </div>
 </section>
 <section>
@@ -261,6 +280,7 @@ footer a{color:#b9c6bd}
   <div class="wrap">
     <div class="intro"><h2>Get in touch</h2></div>
     <div class="contact"><div class="box"><p>Call</p><a class="big" href="tel:01492623320">01492 623320</a><p>Tap to call from your phone.</p></div><div class="box"><p>Email</p><a class="big small" href="mailto:rodney.hamon@btopenworld.com">rodney.hamon@btopenworld.com</a><p>Or use the form above.</p></div><div class="box"><p>Where we are</p><span class="big">Penmaenmawr, Conwy</span><p>Projects across Conwy, Gwynedd, Anglesey and Denbighshire.</p></div></div>
+    <iframe class="map" title="Map" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Hamon+Design%2C+Dorlan%2C+Ysguborwen+Rd%2C+Penmaenmawr+LL34+6PT&amp;z=14&amp;output=embed"></iframe>
   </div>
 </section>
 

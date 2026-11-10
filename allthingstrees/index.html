@@ -111,6 +111,21 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem}
 .review-slot p{color:var(--muted);margin:0}
 .review-slot .tag{display:inline-block;font-size:.8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2em .8em;margin-bottom:14px;color:var(--muted)}
 .reviewcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reviewcards.n2{grid-template-columns:repeat(2,1fr)}
+.reviewcards.n1{grid-template-columns:minmax(0,680px)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:-4px}
+.score b{font-size:2.4rem;font-weight:600;line-height:1}
+.score .stars{margin:0}
+.rate{position:relative;display:inline-block;line-height:0}
+.rate .stars{flex-wrap:nowrap;white-space:nowrap}
+.rate .bg{color:#d9dfdb}
+.rate .fg{position:absolute;left:0;top:0;overflow:hidden}
+.rate .icon{width:1.25em;height:1.25em}
+.score>span:last-child{color:var(--muted)}
+.rate .fg{color:#f2b01e}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{display:block;width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:24px;background:var(--soft)}
+.hero .photo-tag{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.72rem;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:.2em .7em}
 .review{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .review p{color:var(--ink)}
 .review b{display:block;font-weight:500}
@@ -156,7 +171,10 @@ footer a{color:#b9c6bd}
   .hero .actions .btn{flex:1 1 100%;justify-content:center}
   .hero .actions .btn-line{display:none}
   section{padding:60px 0}
-  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards{grid-template-columns:1fr}
+  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards,.reviewcards.n2,.reviewcards.n1{grid-template-columns:1fr}
+  .map{height:260px}
+  .hero .photo-tag{bottom:auto;top:12px}
+  .review-links .btn{flex:1 1 100%;justify-content:center}
   .quote,.reviews,.about{grid-template-columns:1fr;gap:32px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery img:first-child:nth-last-child(odd){grid-column:span 2}
@@ -187,7 +205,8 @@ footer a{color:#b9c6bd}
   </div>
 </header>
 
-<section class="hero plain" style="padding:0">
+<section class="hero left" style="padding:0">
+  <img src="web/soft-att6.jpg" alt="All Things Trees cutting up the trunk of a large felled tree" style="--pos:70% 50%;--posm:25% 50%">
   
   <div class="wrap">
     <div class="hero-text">
@@ -204,7 +223,7 @@ footer a{color:#b9c6bd}
 <section id="services">
   <div class="wrap">
     <div class="intro"><h2>What we do</h2><p>A friendly, efficient service, however simple or difficult the job.</p></div>
-    <div class="cards n6"><div class="card"><img src="web/att6.jpg" alt="Cutting up the trunk of a large felled tree" style="object-position:50% 50%"><div><h3>Tree felling</h3><p>Safe felling of trees, large and small, by our qualified team.</p></div></div><div class="card"><img src="web/att2.jpg" alt="Climber working in the crown of a tree" style="object-position:40% 40%"><div><h3>Crown reduction and thinning</h3><p>Crown shaping, thinning and reduction for trees that have grown too big or too dense.</p></div></div><div class="card"><img src="web/att18.jpg" alt="Working on a tall tree from a lift platform" style="object-position:60% 40%"><div><h3>Pollarding and high hedges</h3><p>Pollarding, and high hedges brought back down to a manageable height.</p></div></div><div class="card"><img src="web/att19.jpg" alt="An oak split by storm damage" style="object-position:50% 40%"><div><h3>Emergency callouts</h3><p>Call us about storm-damaged or dangerous trees.</p></div></div><div class="card"><img src="web/att11.jpg" alt="Chipper on a cleared woodland site" style="object-position:50% 50%"><div><h3>Site clearance and stump grinding</h3><p>Overgrown ground cleared and stumps ground out, with branches chipped on site.</p></div></div><div class="card"><img src="web/att12.jpg" alt="A row of mature trees beside a field" style="object-position:50% 50%"><div><h3>Protected trees</h3><p>Trees with a TPO or in a Conservation Area need council consent. We&#x27;ll deal with the planning office for you.</p></div></div></div>
+    <div class="cards n6"><div class="card"><img src="web/att4.jpg" alt="Cutting a large trunk beside a timber crane" style="object-position:50% 50%"><div><h3>Tree felling</h3><p>Safe felling of trees, large and small, by our qualified team.</p></div></div><div class="card"><img src="web/att2.jpg" alt="Climber working in the crown of a tree" style="object-position:40% 40%"><div><h3>Crown reduction and thinning</h3><p>Crown shaping, thinning and reduction for trees that have grown too big or too dense.</p></div></div><div class="card"><img src="web/att18.jpg" alt="Working on a tall tree from a lift platform" style="object-position:60% 40%"><div><h3>Pollarding and high hedges</h3><p>Pollarding, and high hedges brought back down to a manageable height.</p></div></div><div class="card"><img src="web/att19.jpg" alt="An oak split by storm damage" style="object-position:50% 40%"><div><h3>Emergency callouts</h3><p>Call us about storm-damaged or dangerous trees.</p></div></div><div class="card"><img src="web/att11.jpg" alt="Chipper on a cleared woodland site" style="object-position:50% 50%"><div><h3>Site clearance and stump grinding</h3><p>Overgrown ground cleared and stumps ground out, with branches chipped on site.</p></div></div><div class="card"><img src="web/att12.jpg" alt="A row of mature trees beside a field" style="object-position:50% 50%"><div><h3>Protected trees</h3><p>Trees with a TPO or in a Conservation Area need council consent. We&#x27;ll deal with the planning office for you.</p></div></div></div>
   </div>
 </section>
 <section class="soft">
@@ -230,7 +249,7 @@ footer a{color:#b9c6bd}
 <section id="work" class="soft">
   <div class="wrap">
     <div class="intro"><h2>Our work</h2><p>Some of our jobs, and the kit we use.</p></div>
-    <div class="gallery"><img src="web/att4.jpg" alt="Cutting a large trunk beside a timber crane" style="object-position:50% 50%"><img src="web/att9.jpg" alt="Climber working out along a limb" style="object-position:50% 40%"><img src="web/att17.jpg" alt="Splitting logs with a tractor-driven processor" style="object-position:50% 50%"><img src="web/att14.jpg" alt="Chipping branches beside a main road" style="object-position:40% 50%"><img src="web/att23.jpg" alt="Climber at the top of a tall tree" style="object-position:60% 40%"><img src="web/att16.jpg" alt="Feeding the chipper on a woodland edge" style="object-position:40% 50%"></div>
+    <div class="gallery"><img src="web/att15.jpg" alt="A woodland edge cleared, with the chipper at work" style="object-position:50% 50%"><img src="web/att9.jpg" alt="Climber working out along a limb" style="object-position:50% 40%"><img src="web/att17.jpg" alt="Splitting logs with a tractor-driven processor" style="object-position:50% 50%"><img src="web/att14.jpg" alt="Chipping branches beside a main road" style="object-position:40% 50%"><img src="web/att23.jpg" alt="Climber at the top of a tall tree" style="object-position:60% 40%"><img src="web/att16.jpg" alt="Feeding the chipper on a woodland edge" style="object-position:40% 50%"></div>
   </div>
 </section>
 <section>
@@ -261,6 +280,7 @@ footer a{color:#b9c6bd}
   <div class="wrap">
     <div class="intro"><h2>Get in touch</h2></div>
     <div class="contact"><div class="box"><p>Call</p><a class="big" href="tel:07880555547">07880 555547</a><p>Or Overton 01978 710661, Marford 01978 852520.</p></div><div class="box"><p>Email</p><a class="big small" href="mailto:ian@allthingstrees.co.uk">ian@allthingstrees.co.uk</a><p>Or use the form above.</p></div><div class="box"><p>Where we are</p><span class="big">Marford and Overton, Wrexham</span><p>Covering North Wales, Cheshire and Shropshire.</p></div></div>
+    
   </div>
 </section>
 

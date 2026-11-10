@@ -111,6 +111,21 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem}
 .review-slot p{color:var(--muted);margin:0}
 .review-slot .tag{display:inline-block;font-size:.8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2em .8em;margin-bottom:14px;color:var(--muted)}
 .reviewcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reviewcards.n2{grid-template-columns:repeat(2,1fr)}
+.reviewcards.n1{grid-template-columns:minmax(0,680px)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:-4px}
+.score b{font-size:2.4rem;font-weight:600;line-height:1}
+.score .stars{margin:0}
+.rate{position:relative;display:inline-block;line-height:0}
+.rate .stars{flex-wrap:nowrap;white-space:nowrap}
+.rate .bg{color:#d9dfdb}
+.rate .fg{position:absolute;left:0;top:0;overflow:hidden}
+.rate .icon{width:1.25em;height:1.25em}
+.score>span:last-child{color:var(--muted)}
+.rate .fg{color:#f2b01e}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{display:block;width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:24px;background:var(--soft)}
+.hero .photo-tag{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.72rem;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:.2em .7em}
 .review{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .review p{color:var(--ink)}
 .review b{display:block;font-weight:500}
@@ -156,7 +171,10 @@ footer a{color:#b9c6bd}
   .hero .actions .btn{flex:1 1 100%;justify-content:center}
   .hero .actions .btn-line{display:none}
   section{padding:60px 0}
-  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards{grid-template-columns:1fr}
+  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards,.reviewcards.n2,.reviewcards.n1{grid-template-columns:1fr}
+  .map{height:260px}
+  .hero .photo-tag{bottom:auto;top:12px}
+  .review-links .btn{flex:1 1 100%;justify-content:center}
   .quote,.reviews,.about{grid-template-columns:1fr;gap:32px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery img:first-child:nth-last-child(odd){grid-column:span 2}
@@ -189,6 +207,7 @@ footer a{color:#b9c6bd}
 
 <section class="hero" style="padding:0">
   <img src="web/qu-gi01.jpg" alt="Scrambling up a rocky ridge above a lake" style="--pos:30% 60%;--posm:85% 50%">
+  
   <div class="wrap">
     <div class="hero-text">
       <h1>Outdoor adventures in Snowdonia and across the UK</h1>
@@ -236,7 +255,8 @@ footer a{color:#b9c6bd}
 <section>
   <div class="wrap">
     <div class="intro"><h2>What customers say</h2></div>
-    <div class="reviewcards"><div class="review"><div class="stars"></div><p>A big thank you to Jodie and team, the event was very well organised, the environment was beautiful and puzzle really got the guys thinking together.</p><b>Marks and Spencer</b><small>Testimonial on teal-outdoors.com</small></div><div class="review"><div class="stars"></div><p>It made me reflect on me as an individual back at school, I already have changed some of my behaviours as a result of the programme.</p><b>Krysia, aged 15</b><small>Testimonial on teal-outdoors.com</small></div><div class="review"><div class="stars"></div><p>Now I will take on all challenges and not let my fears hold me back. If I do not try I will not know.</p><b>Melton Foods</b><small>Testimonial on teal-outdoors.com</small></div></div>
+    <div class="reviewcards n3"><div class="review"><p>A big thank you to Jodie and team, the event was very well organised, the environment was beautiful and puzzle really got the guys thinking together.</p><b>Marks and Spencer</b><small>Testimonial on teal-outdoors.com</small></div><div class="review"><p>It made me reflect on me as an individual back at school, I already have changed some of my behaviours as a result of the programme.</p><b>Krysia, aged 15</b><small>Testimonial on teal-outdoors.com</small></div><div class="review"><p>Now I will take on all challenges and not let my fears hold me back. If I do not try I will not know.</p><b>Melton Foods</b><small>Testimonial on teal-outdoors.com</small></div></div>
+    
   </div>
 </section>
 <section id="about" class="soft">
@@ -253,6 +273,7 @@ footer a{color:#b9c6bd}
   <div class="wrap">
     <div class="intro"><h2>Get in touch</h2></div>
     <div class="contact"><div class="box"><p>Call</p><a class="big" href="tel:+447783116404">+44 7783 116404</a><p>Tap to call from your phone.</p></div><div class="box"><p>Email</p><a class="big small" href="mailto:jodie@teal-outdoors.com">jodie@teal-outdoors.com</a><p>Or use the form above.</p></div><div class="box"><p>Where we work</p><span class="big">Snowdonia and across the UK</span><p>Also the Peak District and the Lake District.</p></div></div>
+    
   </div>
 </section>
 

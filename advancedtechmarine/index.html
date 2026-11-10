@@ -111,6 +111,21 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem}
 .review-slot p{color:var(--muted);margin:0}
 .review-slot .tag{display:inline-block;font-size:.8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2em .8em;margin-bottom:14px;color:var(--muted)}
 .reviewcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reviewcards.n2{grid-template-columns:repeat(2,1fr)}
+.reviewcards.n1{grid-template-columns:minmax(0,680px)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:-4px}
+.score b{font-size:2.4rem;font-weight:600;line-height:1}
+.score .stars{margin:0}
+.rate{position:relative;display:inline-block;line-height:0}
+.rate .stars{flex-wrap:nowrap;white-space:nowrap}
+.rate .bg{color:#d9dfdb}
+.rate .fg{position:absolute;left:0;top:0;overflow:hidden}
+.rate .icon{width:1.25em;height:1.25em}
+.score>span:last-child{color:var(--muted)}
+.rate .fg{color:#f2b01e}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{display:block;width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:24px;background:var(--soft)}
+.hero .photo-tag{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.72rem;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:.2em .7em}
 .review{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .review p{color:var(--ink)}
 .review b{display:block;font-weight:500}
@@ -156,7 +171,10 @@ footer a{color:#b9c6bd}
   .hero .actions .btn{flex:1 1 100%;justify-content:center}
   .hero .actions .btn-line{display:none}
   section{padding:60px 0}
-  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards{grid-template-columns:1fr}
+  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards,.reviewcards.n2,.reviewcards.n1{grid-template-columns:1fr}
+  .map{height:260px}
+  .hero .photo-tag{bottom:auto;top:12px}
+  .review-links .btn{flex:1 1 100%;justify-content:center}
   .quote,.reviews,.about{grid-template-columns:1fr;gap:32px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery img:first-child:nth-last-child(odd){grid-column:span 2}
@@ -179,7 +197,7 @@ footer a{color:#b9c6bd}
       <img src="web/ATMLogoA1.jpg" alt="AdvancedTech Marine logo">
       <span><strong>AdvancedTech Marine</strong><small>Marine electronic and electrical services</small></span>
     </a>
-    <nav class="main"><a href="#services">What we do</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <nav class="main"><a href="#services">What we do</a><a href="#work">Our work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
     
     <a class="tel" href="tel:07803377932">0780 33 77 932</a>
     <a class="btn btn-green" href="#quote">Ask for a quote</a>
@@ -187,7 +205,8 @@ footer a{color:#b9c6bd}
   </div>
 </header>
 
-<section class="hero plain" style="padding:0">
+<section class="hero" style="padding:0">
+  <img src="web/gmaps-06.jpg" alt="Raymarine chartplotter fitted at the helm of a sailing yacht" style="--pos:50% 55%;--posm:50% 50%">
   
   <div class="wrap">
     <div class="hero-text">
@@ -204,7 +223,7 @@ footer a{color:#b9c6bd}
 <section id="services">
   <div class="wrap">
     <div class="intro"><h2>What we do</h2><p>From a new VHF radio to a full set of navigation instruments, for boats at all the marinas and boatyards in the area.</p></div>
-    <div class="cards n3"><div class="card noimg"><div><h3>Installation</h3><p>Radar, chartplotters, fishfinders, navigation instruments, VHF, inverters and chargers, fitted on board by a factory-trained installer.</p></div></div><div class="card noimg"><div><h3>Maintenance and repair</h3><p>Repairs and maintenance for the marine electronics already on your boat.</p></div></div><div class="card noimg"><div><h3>Supply</h3><p>The full range of marine electronic equipment, from brands including B&amp;G, Garmin, Icom, NASA, Raymarine, Simrad and Tacktick.</p></div></div></div>
+    <div class="cards n3"><div class="card"><img src="web/gmaps-08.jpg" alt="Chartplotter fitted above the compass at a yacht&#x27;s wheel" style="object-position:50% 45%"><div><h3>Installation</h3><p>Radar, chartplotters, fishfinders, navigation instruments, VHF, inverters and chargers, fitted on board by a factory-trained installer.</p></div></div><div class="card"><img src="web/gmaps-01.jpg" alt="Neatly wired breaker panel and busbar on board" style="object-position:50% 40%"><div><h3>Maintenance and repair</h3><p>Repairs and maintenance for the marine electronics already on your boat.</p></div></div><div class="card"><img src="web/gmaps-07.jpg" alt="B&amp;G display and instruments mounted at the helm" style="object-position:50% 35%"><div><h3>Supply</h3><p>The full range of marine electronic equipment, from brands including B&amp;G, Garmin, Icom, NASA, Raymarine, Simrad and Tacktick.</p></div></div></div>
   </div>
 </section>
 <section class="soft">
@@ -227,34 +246,34 @@ footer a{color:#b9c6bd}
     </form>
   </div>
 </section>
+<section id="work" class="soft">
+  <div class="wrap">
+    <div class="intro"><h2>Our work</h2><p>A few recent installs on boats around North Wales.</p></div>
+    <div class="gallery"><img src="web/gmaps-02.jpg" alt="Three Raymarine instrument displays on a yacht&#x27;s pushpit" style="object-position:50% 60%"><img src="web/gmaps-10.jpg" alt="Displays fitted either side of a yacht&#x27;s companionway" style="object-position:50% 40%"><img src="web/gmaps-11.jpg" alt="B&amp;G chartplotter set into a cockpit panel" style="object-position:50% 50%"></div>
+  </div>
+</section>
 <section>
-  <div class="wrap reviews">
-    <div>
-      <h2>What customers say</h2>
-      <p style="color:var(--muted)">Reviews from your Google listing would show here, newest first, with a button for happy customers to leave one.</p>
-      <a class="btn btn-line dark" href="#">Leave us a review</a>
-    </div>
-    <div class="review-slot">
-      <span class="tag">Example: your Google reviews go here</span>
-      <div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div>
-      <p>Each review shows the customer's first name, the stars and what they said, with a link to read them all on Google.</p>
-    </div>
+  <div class="wrap">
+    <div class="intro"><h2>What customers say</h2><div class="score"><b>5.0</b><span class="rate"><span class="stars bg"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></span><span class="stars fg" style="width:100%"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></span></span><span>out of 5 on Google, from 65 reviews</span></div></div>
+    <div class="reviewcards n3"><div class="review"><div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div><p>Was looking for a quality marine electrics and electronics specialist in North Wales and was recommended Advanced Tech Marine by two other yacht owners. Dave repaired my anchor windlass efficiently and with good communication. Will use again.</p><b>Jeremy S.</b><small>Google · a month ago</small></div><div class="review"><div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div><p>I recently had a Chartplotter fitted by Dave at AdvanceTech Marine. He supplied and fitted a Garmin for me. Dave’s communication was excellent throughout and really helped me choose the best plotter for me and my boat. His installation was clean and it’s clear he takes pride in his work. ...</p><b>Sam K.</b><small>Google · 4 months ago</small></div><div class="review"><div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div><p>Dave has done work on 2 different boats in Holyhead and more recently in Conwy. The most recent was to address an number of issues on a small boat with a lot of wiring. Dave helped me understand the existing system, fixed some small issues and reconfigured the existing solar panels and fit a socket for an emergency panel. ...</p><b>Matthew F.</b><small>Google · 4 months ago</small></div></div>
+    <div class="review-links"><a class="btn btn-line dark" href="https://www.google.com/maps/place/AdvancedTech+Marine/@53.2305689,-4.1782697,17z/data=!3m1!4b1!4m6!3m5!1s0x4865a9f09cb1498d:0x3b1ef669dd1cc6d4!8m2!3d53.2305689!4d-4.1782697!16s%2Fg%2F11gcqtyvj8?hl=en-GB&amp;entry=ttu&amp;g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D">Read all our reviews on Google</a><a class="btn btn-green" href="https://www.google.com/maps/place/AdvancedTech+Marine/@53.2305689,-4.1782697,17z/data=!3m1!4b1!4m6!3m5!1s0x4865a9f09cb1498d:0x3b1ef669dd1cc6d4!8m2!3d53.2305689!4d-4.1782697!16s%2Fg%2F11gcqtyvj8?hl=en-GB&amp;entry=ttu&amp;g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D">Leave us a review</a></div>
   </div>
 </section>
 <section id="about" class="soft">
-  <div class="wrap about noimg">
+  <div class="wrap about">
     <div>
       <h2>About AdvancedTech Marine</h2>
       <p>AdvancedTech Marine is the main local installer and supplier of marine electronics in North Wales and the North West, based in Menai Bridge on Anglesey.</p><p>With over 25 years in the marine trade locally, we take care and pride in all the electronics on board your boat. We work at all the marinas and boatyards in the area, including Pwllheli, Conwy, Deganwy and Holyhead, and offer a friendly, knowledgeable service in English or Welsh.</p>
       <div class="facts"><div class="fact"><b>25+ years</b><span>In the local marine trade</span></div><div class="fact"><b>Factory trained</b><span>Garmin, Raymarine and Tacktick</span></div><div class="fact"><b>All local marinas</b><span>Pwllheli, Conwy, Deganwy, Holyhead</span></div><div class="fact"><b>English or Welsh</b><span>Friendly, local service</span></div></div>
     </div>
-    
+    <img src="web/gmaps-12.jpg" alt="Helm console with Garmin and Lowrance displays fitted in the workshop" style="object-position:50% 50%">
   </div>
 </section>
 <section id="contact">
   <div class="wrap">
     <div class="intro"><h2>Get in touch</h2></div>
     <div class="contact"><div class="box"><p>Call</p><a class="big" href="tel:07803377932">0780 33 77 932</a><p>Dave Jones, direct line. Tap to call from your phone.</p></div><div class="box"><p>Email</p><a class="big small" href="mailto:dave.jones@advancedtechmarine.com">dave.jones@advancedtechmarine.com</a><p>Or use the form above.</p></div><div class="box"><p>Where we are</p><span class="big">Menai Bridge, Anglesey</span><p>Working at marinas and boatyards across North Wales and the North West.</p></div></div>
+    <iframe class="map" title="Map" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=AdvancedTech+Marine%2C+Fron+Heulog%2C+Menai+Bridge+LL59+5NA&amp;z=14&amp;output=embed"></iframe>
   </div>
 </section>
 

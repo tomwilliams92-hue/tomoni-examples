@@ -111,6 +111,21 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem}
 .review-slot p{color:var(--muted);margin:0}
 .review-slot .tag{display:inline-block;font-size:.8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2em .8em;margin-bottom:14px;color:var(--muted)}
 .reviewcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reviewcards.n2{grid-template-columns:repeat(2,1fr)}
+.reviewcards.n1{grid-template-columns:minmax(0,680px)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:-4px}
+.score b{font-size:2.4rem;font-weight:600;line-height:1}
+.score .stars{margin:0}
+.rate{position:relative;display:inline-block;line-height:0}
+.rate .stars{flex-wrap:nowrap;white-space:nowrap}
+.rate .bg{color:#d9dfdb}
+.rate .fg{position:absolute;left:0;top:0;overflow:hidden}
+.rate .icon{width:1.25em;height:1.25em}
+.score>span:last-child{color:var(--muted)}
+.rate .fg{color:#f2b01e}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{display:block;width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:24px;background:var(--soft)}
+.hero .photo-tag{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.72rem;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:.2em .7em}
 .review{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .review p{color:var(--ink)}
 .review b{display:block;font-weight:500}
@@ -156,7 +171,10 @@ footer a{color:#b9c6bd}
   .hero .actions .btn{flex:1 1 100%;justify-content:center}
   .hero .actions .btn-line{display:none}
   section{padding:60px 0}
-  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards{grid-template-columns:1fr}
+  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards,.reviewcards.n2,.reviewcards.n1{grid-template-columns:1fr}
+  .map{height:260px}
+  .hero .photo-tag{bottom:auto;top:12px}
+  .review-links .btn{flex:1 1 100%;justify-content:center}
   .quote,.reviews,.about{grid-template-columns:1fr;gap:32px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery img:first-child:nth-last-child(odd){grid-column:span 2}
@@ -189,6 +207,7 @@ footer a{color:#b9c6bd}
 
 <section class="hero left" style="padding:0">
   <img src="web/914fe9_e88b9a6feb6a4fd1a7cc9144e8a178d7~mv2_d_6720_4480_s_4_2.jpg" alt="Highlife rope access worker repairing a stone wall" style="--pos:50% 35%;--posm:72% 40%">
+  
   <div class="wrap">
     <div class="hero-text">
       <h1>Traditional building repairs in North Wales</h1>
@@ -230,13 +249,14 @@ footer a{color:#b9c6bd}
 <section id="work" class="soft">
   <div class="wrap">
     <div class="intro"><h2>Our work</h2><p>Some of the castles, churches and historic buildings we&#x27;ve worked on.</p></div>
-    <div class="gallery"><img src="web/914fe9_e97a86a7a94046438f3b1156d8d802c9~mv2.jpeg" alt="Rope access team working on Conwy Castle" style="object-position:50% 40%"><img src="web/914fe9_10499be0321249a6a22cafa1ee45512a~mv2.jpg" alt="Climber working on a stone church spire" style="object-position:50% 45%"><img src="web/914fe9_379b6c980d1048cb95347ccf46bb79e8~mv2.jpg" alt="Lead work at the top of a spire" style="object-position:50% 30%"><img src="web/914fe9_51cde4d95cbc42bf816f4aee583f9b57~mv2.jpg" alt="Fitting a new pane of glass on an atrium roof" style="object-position:50% 50%"><img src="web/914fe9_1096beb81323435e9b404bdb12cba864~mv2.jpg" alt="Working between stone pinnacles on a church tower" style="object-position:50% 40%"><img src="web/914fe9_4255ba44a4af4a47b72f79754d083bad~mv2.jpg" alt="Two rope access workers on a church tower" style="object-position:50% 40%"></div>
+    <div class="gallery"><img src="web/914fe9_e97a86a7a94046438f3b1156d8d802c9~mv2.jpeg" alt="Rope access team working on Conwy Castle" style="object-position:50% 40%"><img src="web/914fe9_10499be0321249a6a22cafa1ee45512a~mv2.jpg" alt="Climber working on a stone church spire" style="object-position:50% 45%"><img src="web/gmaps-07.jpg" alt="Highlife team member at a ruined abbey&#x27;s stone arch" style="object-position:50% 50%"><img src="web/gmaps-02.jpg" alt="Two rope access workers repairing a castle tower above the moat" style="object-position:60% 45%"><img src="web/914fe9_1096beb81323435e9b404bdb12cba864~mv2.jpg" alt="Working between stone pinnacles on a church tower" style="object-position:50% 40%"><img src="web/914fe9_4255ba44a4af4a47b72f79754d083bad~mv2.jpg" alt="Two rope access workers on a church tower" style="object-position:50% 40%"></div>
   </div>
 </section>
 <section>
   <div class="wrap">
     <div class="intro"><h2>What customers say</h2></div>
-    <div class="reviewcards"><div class="review"><div class="stars"></div><p>Since stabilising this spire, Highlife have become my first choice for &#x27;can&#x27;t be done&#x27; projects.</p><b>David Wiggins, conservation engineer</b><small>Published on highliferopeaccess.com</small></div><div class="review"><div class="stars"></div><p>The quality of the work undertaken from ropes has surpassed what we often see from people working on fixed scaffolds.</p><b>Tony Keeble, Overton Architects</b><small>Published on highliferopeaccess.com</small></div></div>
+    <div class="reviewcards n2"><div class="review"><p>Since stabilising this spire, Highlife have become my first choice for &#x27;can&#x27;t be done&#x27; projects.</p><b>David Wiggins, conservation engineer</b><small>Published on highliferopeaccess.com</small></div><div class="review"><p>The quality of the work undertaken from ropes has surpassed what we often see from people working on fixed scaffolds.</p><b>Tony Keeble, Overton Architects</b><small>Published on highliferopeaccess.com</small></div></div>
+    
   </div>
 </section>
 <section id="about" class="soft">
@@ -253,6 +273,7 @@ footer a{color:#b9c6bd}
   <div class="wrap">
     <div class="intro"><h2>Get in touch</h2></div>
     <div class="contact"><div class="box"><p>Call</p><a class="big" href="tel:07401441394">07401 441394</a><p>Or 07907 888702 and 07541 086548.</p></div><div class="box"><p>Email</p><a class="big small" href="mailto:info@highliferopeaccess.com">info@highliferopeaccess.com</a><p>Or use the form above.</p></div><div class="box"><p>Where we are</p><span class="big">Bethesda, Gwynedd</span><p>Homes across North Wales, and historic buildings across Wales and the North West of England.</p></div></div>
+    
   </div>
 </section>
 

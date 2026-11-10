@@ -111,6 +111,21 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem}
 .review-slot p{color:var(--muted);margin:0}
 .review-slot .tag{display:inline-block;font-size:.8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2em .8em;margin-bottom:14px;color:var(--muted)}
 .reviewcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reviewcards.n2{grid-template-columns:repeat(2,1fr)}
+.reviewcards.n1{grid-template-columns:minmax(0,680px)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:-4px}
+.score b{font-size:2.4rem;font-weight:600;line-height:1}
+.score .stars{margin:0}
+.rate{position:relative;display:inline-block;line-height:0}
+.rate .stars{flex-wrap:nowrap;white-space:nowrap}
+.rate .bg{color:#d9dfdb}
+.rate .fg{position:absolute;left:0;top:0;overflow:hidden}
+.rate .icon{width:1.25em;height:1.25em}
+.score>span:last-child{color:var(--muted)}
+.rate .fg{color:#f2b01e}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{display:block;width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:24px;background:var(--soft)}
+.hero .photo-tag{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.72rem;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:.2em .7em}
 .review{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .review p{color:var(--ink)}
 .review b{display:block;font-weight:500}
@@ -156,7 +171,10 @@ footer a{color:#b9c6bd}
   .hero .actions .btn{flex:1 1 100%;justify-content:center}
   .hero .actions .btn-line{display:none}
   section{padding:60px 0}
-  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards{grid-template-columns:1fr}
+  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards,.reviewcards.n2,.reviewcards.n1{grid-template-columns:1fr}
+  .map{height:260px}
+  .hero .photo-tag{bottom:auto;top:12px}
+  .review-links .btn{flex:1 1 100%;justify-content:center}
   .quote,.reviews,.about{grid-template-columns:1fr;gap:32px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery img:first-child:nth-last-child(odd){grid-column:span 2}
@@ -179,7 +197,7 @@ footer a{color:#b9c6bd}
       
       <span><strong>North Wales Van Sales</strong><small>New and used vans, pick-ups and cars</small></span>
     </a>
-    <nav class="main"><a href="#services">Vans in stock</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <nav class="main"><a href="#services">Vans in stock</a><a href="#work">More vans in stock</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
     
     <a class="tel" href="tel:01492514222">01492 514222</a>
     <a class="btn btn-green" href="#quote">Ask about a van</a>
@@ -187,7 +205,8 @@ footer a{color:#b9c6bd}
   </div>
 </header>
 
-<section class="hero plain" style="padding:0">
+<section class="hero left" style="padding:0">
+  <img src="web/soft-1868_1.jpg" alt="Vans for sale in the yard at North Wales Van Sales" style="--pos:70% 55%;--posm:86% 60%">
   
   <div class="wrap">
     <div class="hero-text">
@@ -227,6 +246,12 @@ footer a{color:#b9c6bd}
     </form>
   </div>
 </section>
+<section id="work" class="soft">
+  <div class="wrap">
+    <div class="intro"><h2>More vans in stock</h2><p>A few more from the yard. Ask about any of them in the form above.</p></div>
+    <div class="gallery"><img src="web/1856_1.jpg" alt="2025 Ford E-Transit" style="object-position:40% 50%"><img src="web/1859_1.jpg" alt="2019 Ford Transit Custom" style="object-position:45% 60%"><img src="web/1883_1.jpg" alt="2023 Vauxhall Vivaro" style="object-position:70% 55%"><img src="web/1858_1.jpg" alt="2022 Toyota Proace Electric" style="object-position:40% 60%"><img src="web/1871_1.jpg" alt="2021 Ford Transit" style="object-position:65% 55%"><img src="web/1884_1.jpg" alt="2021 Iveco 50C" style="object-position:50% 55%"></div>
+  </div>
+</section>
 <section>
   <div class="wrap reviews">
     <div>
@@ -255,6 +280,7 @@ footer a{color:#b9c6bd}
   <div class="wrap">
     <div class="intro"><h2>Get in touch</h2></div>
     <div class="contact"><div class="box"><p>Call</p><a class="big" href="tel:01492514222">01492 514222</a><p>Or mobile 07721 330079.</p></div><div class="box"><p>Email</p><a class="big small" href="mailto:info@northwalesvansales.co.uk">info@northwalesvansales.co.uk</a><p>Or use the form above.</p></div><div class="box"><p>Where we are</p><span class="big">Llanddulas, Abergele</span><p>Just off the A55 at junction 23. Supplying the whole of North Wales and the North West.</p></div></div>
+    <iframe class="map" title="Map" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=North+Wales+Van+Sales+Ltd%2C+Fron+Green%2C+Rhyd-Y-Foel+Rd%2C+Rhyd-y-foel%2C+Abergele+LL22+8EA&amp;z=14&amp;output=embed"></iframe>
   </div>
 </section>
 

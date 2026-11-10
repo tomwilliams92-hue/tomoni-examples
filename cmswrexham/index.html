@@ -111,6 +111,21 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem}
 .review-slot p{color:var(--muted);margin:0}
 .review-slot .tag{display:inline-block;font-size:.8rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2em .8em;margin-bottom:14px;color:var(--muted)}
 .reviewcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reviewcards.n2{grid-template-columns:repeat(2,1fr)}
+.reviewcards.n1{grid-template-columns:minmax(0,680px)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:-4px}
+.score b{font-size:2.4rem;font-weight:600;line-height:1}
+.score .stars{margin:0}
+.rate{position:relative;display:inline-block;line-height:0}
+.rate .stars{flex-wrap:nowrap;white-space:nowrap}
+.rate .bg{color:#d9dfdb}
+.rate .fg{position:absolute;left:0;top:0;overflow:hidden}
+.rate .icon{width:1.25em;height:1.25em}
+.score>span:last-child{color:var(--muted)}
+.rate .fg{color:#f2b01e}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{display:block;width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:24px;background:var(--soft)}
+.hero .photo-tag{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.72rem;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:.2em .7em}
 .review{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .review p{color:var(--ink)}
 .review b{display:block;font-weight:500}
@@ -156,7 +171,10 @@ footer a{color:#b9c6bd}
   .hero .actions .btn{flex:1 1 100%;justify-content:center}
   .hero .actions .btn-line{display:none}
   section{padding:60px 0}
-  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards{grid-template-columns:1fr}
+  .cards,.cards.n4,.cards.n2,.steps,.contact,.reviewcards,.reviewcards.n2,.reviewcards.n1{grid-template-columns:1fr}
+  .map{height:260px}
+  .hero .photo-tag{bottom:auto;top:12px}
+  .review-links .btn{flex:1 1 100%;justify-content:center}
   .quote,.reviews,.about{grid-template-columns:1fr;gap:32px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery img:first-child:nth-last-child(odd){grid-column:span 2}
@@ -187,7 +205,8 @@ footer a{color:#b9c6bd}
   </div>
 </header>
 
-<section class="hero plain" style="padding:0">
+<section class="hero" style="padding:0">
+  <img src="web/gmaps-11.jpg" alt="CNC milling machine in the CMS Wrexham workshop" style="--pos:30% 45%;--posm:24% 40%">
   
   <div class="wrap">
     <div class="hero-text">
@@ -204,7 +223,7 @@ footer a{color:#b9c6bd}
 <section id="services">
   <div class="wrap">
     <div class="intro"><h2>What we do</h2><p>We work in mild, alloy and stainless steel, aluminium, brass, bronze and many plastics, and keep a wide stock of materials for emergencies.</p></div>
-    <div class="cards n6"><div class="card"><img src="web/lathebig2.jpg" alt="Large shaft being turned on a lathe" style="object-position:50% 50%"><div><h3>Breakdown repairs</h3><p>Broken shafts, hubs that need boring and sleeving, and worn parts built up and machined back, turned round quickly.</p></div></div><div class="card"><img src="web/20131021_110751.jpg" alt="Lathes in the workshop" style="object-position:60% 50%"><div><h3>Turning</h3><p>Conventional lathes up to 2540 mm between centres with a 1080 mm swing, and CNC lathes for batch work.</p></div></div><div class="card"><img src="web/20131021_093217.jpg" alt="Steel plate on a milling machine" style="object-position:50% 50%"><div><h3>Milling</h3><p>Manual millers up to 1500 x 750 mm and CNC millers, from keyways and slots to fully machined parts.</p></div></div><div class="card"><img src="web/shaft (2).jpg" alt="Finished stepped shaft" style="object-position:50% 50%"><div><h3>CNC and grinding</h3><p>CNC turning and milling for batches in the hundreds or thousands, and surface and cylindrical grinding to 0.005 mm.</p></div></div><div class="card"><img src="web/20131021_092402.jpg" alt="Fabricated stainless steel roller stand" style="object-position:50% 50%"><div><h3>Welding and fabrication</h3><p>TIG and arc welding in steel, stainless and aluminium, plus metal spraying, brazing, plasma cutting and heat treatment.</p></div></div><div class="card"><img src="web/Break Press Picture.jpg" alt="The CMS CNC press brake" style="object-position:50% 45%"><div><h3>Bending and cutting</h3><p>A 300 ton CNC press brake and a large guillotine, both taking steel up to 12 mm thick and 3 metres long.</p></div></div></div>
+    <div class="cards n6"><div class="card"><img src="web/lathebig2.jpg" alt="Large shaft being turned on a lathe" style="object-position:50% 50%"><div><h3>Breakdown repairs</h3><p>Broken shafts, hubs that need boring and sleeving, and worn parts built up and machined back, turned round quickly.</p></div></div><div class="card"><img src="web/gmaps-12.jpg" alt="Lathe in the CMS workshop" style="object-position:55% 45%"><div><h3>Turning</h3><p>Conventional lathes up to 2540 mm between centres with a 1080 mm swing, and CNC lathes for batch work.</p></div></div><div class="card"><img src="web/20131021_093217.jpg" alt="Steel plate on a milling machine" style="object-position:50% 50%"><div><h3>Milling</h3><p>Manual millers up to 1500 x 750 mm and CNC millers, from keyways and slots to fully machined parts.</p></div></div><div class="card"><img src="web/shaft (2).jpg" alt="Finished stepped shaft" style="object-position:50% 50%"><div><h3>CNC and grinding</h3><p>CNC turning and milling for batches in the hundreds or thousands, and surface and cylindrical grinding to 0.005 mm.</p></div></div><div class="card"><img src="web/gmaps-14.jpg" alt="The welding and fabrication bay" style="object-position:40% 55%"><div><h3>Welding and fabrication</h3><p>TIG and arc welding in steel, stainless and aluminium, plus metal spraying, brazing, plasma cutting and heat treatment.</p></div></div><div class="card"><img src="web/Break Press Picture.jpg" alt="The CMS CNC press brake" style="object-position:50% 45%"><div><h3>Bending and cutting</h3><p>A 300 ton CNC press brake and a large guillotine, both taking steel up to 12 mm thick and 3 metres long.</p></div></div></div>
   </div>
 </section>
 <section class="soft">
@@ -229,38 +248,32 @@ footer a{color:#b9c6bd}
 </section>
 <section id="work" class="soft">
   <div class="wrap">
-    <div class="intro"><h2>Our work</h2><p>Parts we&#x27;ve made and repaired, and some of our machines.</p></div>
-    <div class="gallery"><img src="web/mill1.jpg" alt="Milled aluminium block with a turned shaft" style="object-position:50% 50%"><img src="web/ring.jpg" alt="Machined threaded rings" style="object-position:50% 50%"><img src="web/20140506_083041.jpg" alt="Batch of threaded studs" style="object-position:50% 50%"><img src="web/nylon1.jpg" alt="Machined nylon part with steel pins" style="object-position:50% 50%"><img src="web/20131021_093459.jpg" alt="Threaded bar on a steel bench" style="object-position:50% 50%"><img src="web/Guillotine Picture.jpg" alt="The CMS large capacity guillotine" style="object-position:50% 50%"></div>
+    <div class="intro"><h2>Our work</h2><p>Parts we&#x27;ve made and repaired, and our workshop.</p></div>
+    <div class="gallery"><img src="web/mill1.jpg" alt="Milled aluminium block with a turned shaft" style="object-position:50% 50%"><img src="web/gmaps-04.jpg" alt="Turret mill in the CMS workshop" style="object-position:55% 50%"><img src="web/ring.jpg" alt="Machined threaded rings" style="object-position:50% 50%"><img src="web/20140506_083041.jpg" alt="Batch of threaded studs" style="object-position:50% 50%"><img src="web/gmaps-10.jpg" alt="Inside the CMS workshop" style="object-position:40% 55%"><img src="web/20131021_092402.jpg" alt="Fabricated stainless steel roller stand" style="object-position:50% 50%"></div>
   </div>
 </section>
 <section>
-  <div class="wrap reviews">
-    <div>
-      <h2>What customers say</h2>
-      <p style="color:var(--muted)">Reviews from your Google listing would show here, newest first, with a button for happy customers to leave one.</p>
-      <a class="btn btn-line dark" href="#">Leave us a review</a>
-    </div>
-    <div class="review-slot">
-      <span class="tag">Example: your Google reviews go here</span>
-      <div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div>
-      <p>Each review shows the customer's first name, the stars and what they said, with a link to read them all on Google.</p>
-    </div>
+  <div class="wrap">
+    <div class="intro"><h2>What customers say</h2><div class="score"><b>4.2</b><span class="rate"><span class="stars bg"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></span><span class="stars fg" style="width:84%"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></span></span><span>out of 5 on Google, from 10 reviews</span></div></div>
+    <div class="reviewcards n3"><div class="review"><div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div><p>Mel and his staff are very helpful and provide good ideas and dish out work to our manufacturing problems!</p><b>Rich D.</b><small>Google · a year ago</small></div><div class="review"><div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div><p>Good place repaird my 4 stoke cylinder head broken bolts ect. Highly recommended</p><b>Carl M.</b><small>Google · 4 years ago</small></div><div class="review"><div class="stars"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg></div><p>CMS are always helpful and produce quality products at reasonable prices. I wouldn&#x27;t go anywhere else.</p><b>Mark S.</b><small>Google · 5 years ago</small></div></div>
+    <div class="review-links"><a class="btn btn-line dark" href="https://www.google.com/maps/place/CMS+Wrexham+Ltd./@53.0488415,-2.9256752,17z/data=!3m1!4b1!4m6!3m5!1s0x487ac0e3e75e8d3b:0x6a4138272bae40b!8m2!3d53.0488415!4d-2.9256752!16s%2Fg%2F1w0q_fwy?hl=en-GB&amp;entry=ttu&amp;g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D">Read all our reviews on Google</a><a class="btn btn-green" href="https://www.google.com/maps/place/CMS+Wrexham+Ltd./@53.0488415,-2.9256752,17z/data=!3m1!4b1!4m6!3m5!1s0x487ac0e3e75e8d3b:0x6a4138272bae40b!8m2!3d53.0488415!4d-2.9256752!16s%2Fg%2F1w0q_fwy?hl=en-GB&amp;entry=ttu&amp;g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D">Leave us a review</a></div>
   </div>
 </section>
 <section id="about" class="soft">
-  <div class="wrap about noimg">
+  <div class="wrap about">
     <div>
       <h2>About CMS Wrexham</h2>
       <p>CMS Wrexham has been on Wrexham Industrial Estate for 30 years, giving companies a specialist engineering service. We handle emergency breakdowns and larger projects, from the first design to the finished part.</p><p>Our technicians are trained on a wide range of machines, and many of the team have over 40 years in engineering. One of our younger members came second in the Apprentice of the Year awards.</p>
       <div class="facts"><div class="fact"><b>7 days</b><span>Weekdays 8am to 4:30pm, weekends 8am to 12pm</span></div><div class="fact"><b>40+ years</b><span>Experience for many of the team</span></div><div class="fact"><b>0.005 mm</b><span>Grinding accuracy</span></div><div class="fact"><b>300 ton</b><span>CNC press brake, 3 m long</span></div></div>
     </div>
-    
+    <img src="web/gmaps-01.jpg" alt="The CMS Wrexham unit and sign on Ash Road North" style="object-position:60% 50%">
   </div>
 </section>
 <section id="contact">
   <div class="wrap">
     <div class="intro"><h2>Get in touch</h2></div>
     <div class="contact"><div class="box"><p>Call</p><a class="big" href="tel:01978660363">01978 660363</a><p>Breakdown? Call us. We work seven days a week.</p></div><div class="box"><p>Email</p><a class="big small" href="mailto:admin@cmswrexham.com">admin@cmswrexham.com</a><p>Or use the form above.</p></div><div class="box"><p>Where we are</p><span class="big">Wrexham Industrial Estate</span><p>Unit 404, Ash Road North, Wrexham Industrial Estate, Wrexham LL13 9UF.</p><p class="hours">Weekdays 8am to 4:30pm. Weekends 8am to 12pm.</p></div></div>
+    <iframe class="map" title="Map" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=CMS+Wrexham+Ltd%2C+404+Ash+Rd+N%2C+Holt%2C+Wrexham+LL13+9UF&amp;z=14&amp;output=embed"></iframe>
   </div>
 </section>
 
