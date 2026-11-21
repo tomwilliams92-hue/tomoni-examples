@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Deeside Home Care: home care in Shotton and across Deeside</title><meta name="description" content="Family-run home care for adults across Deeside, Flintshire, from our office in Shotton. Visits from 8am to 10pm, 365 days a year.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--brand:#632f7f;--brand-ink:#ffffff;--brand-text:#632f7f;--accent:#c8a3dc;--dark:#23112d;--bg:#fbfafc;--alt:#f2ecf5;--ink:#1d1424;--fd:"Fraunces",Georgia,serif;--ft:"Figtree",system-ui,sans-serif}
+/* Tomoni master template. Colours and fonts come from each business (render.py :root). */
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--ft);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(100% - 64px,1200px);margin:0 auto}
+h1,h2,h3{font-family:var(--fd);font-weight:600;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,5.2vw,72px);line-height:1.02}
+h2{font-size:clamp(30px,3.4vw,46px);line-height:1.08;max-width:22ch}
+h3{font-size:21px;line-height:1.25}
+.muted{color:color-mix(in srgb,currentColor 58%,transparent)}
+h2 .muted{display:inline}
+.lead{font-size:19px;line-height:1.55;max-width:56ch}
+.kicker,.eyebrow{font:600 14px/1.3 var(--ft);letter-spacing:.02em;color:var(--brand-text);margin:0 0 18px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;height:52px;padding:0 24px;border-radius:12px;font:600 16px var(--ft);text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn--primary{background:var(--brand);color:var(--brand-ink)}
+.btn--secondary{border:1.5px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+.btn--light{background:#fff;color:var(--dark)}
+.btn--ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px)}
+.nav__bar{display:flex;align-items:center;gap:32px;height:96px}
+.nav nav{display:flex;gap:28px;margin-left:auto;font-weight:500;font-size:15px}
+.nav nav a{text-decoration:none;opacity:.8}.nav nav a:hover{opacity:1}
+.nav .btn{height:44px;font-size:15px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:600 24px var(--fd)}
+.logo img{width:auto;max-height:76px}
+.logo span{white-space:nowrap}
+
+/* hero: full width like withtomoni.com (Tom, 20.11.2026). Their photo under a dark brand-tinted
+   overlay, white centred text; facts and the "big change" card along the bottom. Fills the first
+   desktop screen under the nav, so the email picture is all hero. */
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:var(--dark);min-height:min(804px,calc(100svh - 96px));display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:64px 0 32px}
+.hero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 55% 50% at 50% 42%,color-mix(in srgb,var(--dark) 45%,transparent),transparent 75%),linear-gradient(180deg,color-mix(in srgb,var(--dark) 58%,transparent),color-mix(in srgb,var(--dark) 44%,transparent) 45%,color-mix(in srgb,var(--dark) 88%,transparent))}
+.hero--marks::before{background:radial-gradient(ellipse 85% 75% at 50% 0%,color-mix(in srgb,var(--brand) 75%,transparent),transparent 72%)}
+.hero__inner{display:flex;flex-direction:column;align-items:center;text-align:center;margin-block:auto}
+/* hero.align left/right: when the photo's subject sits on one side, the text takes the other half */
+.hero--left .hero__inner,.hero--right .hero__inner{align-items:flex-start;text-align:left}
+.hero--left .hero__inner{padding-right:44%}.hero--right .hero__inner{padding-left:52%}
+.hero--left .lead,.hero--right .lead{max-width:46ch}
+.hero--left .btns,.hero--right .btns{justify-content:flex-start}
+.hero--left::before{background:linear-gradient(90deg,color-mix(in srgb,var(--dark) 86%,transparent),color-mix(in srgb,var(--dark) 55%,transparent) 50%,color-mix(in srgb,var(--dark) 10%,transparent)),linear-gradient(180deg,transparent 62%,color-mix(in srgb,var(--dark) 85%,transparent))}
+.hero--right::before{background:linear-gradient(270deg,color-mix(in srgb,var(--dark) 86%,transparent),color-mix(in srgb,var(--dark) 55%,transparent) 50%,color-mix(in srgb,var(--dark) 10%,transparent)),linear-gradient(180deg,transparent 62%,color-mix(in srgb,var(--dark) 85%,transparent))}
+.hero .kicker{color:#fff;opacity:.85}
+.hero h1{font-size:clamp(40px,4.6vw,64px);max-width:20ch;margin-bottom:18px;text-shadow:0 2px 28px rgba(0,0,0,.3)}
+.hero .lead{margin:0;max-width:60ch;opacity:.94;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero .btns{justify-content:center}
+.hero .btn--ghost{border:2px solid #fff;background:rgba(255,255,255,.12)}
+.hero .gbadge{color:var(--ink);margin-top:24px}
+.hero--marks{padding-top:44px;gap:32px}
+.hero__marks{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:24px}
+.hero__marks img{height:88px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:14px;padding:10px}
+.hero__bar{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:end}
+.facts{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:48px}
+.facts li{display:flex;flex-direction:column}
+.facts b{font:600 30px/1.1 var(--fd);letter-spacing:-.02em}
+.facts span{font-size:14px;opacity:.75}
+.hero__card{color:var(--ink);background:#fff;border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;box-shadow:0 12px 32px rgba(0,0,0,.25);font-size:15px}
+.hero__card .eyebrow{margin:0 0 4px;font-size:13px}
+.hero__card b{font:600 18px/1.3 var(--ft)}
+.hero__card a{margin-top:8px;font-weight:600;color:var(--brand-text);text-decoration:none}
+
+/* sections: as tall as their content */
+.sec{padding:72px 0}
+.sec h2{margin-bottom:32px}
+.sec--alt{background:var(--alt)}
+.sec--dark{background:var(--dark);color:#fff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split--top{align-items:start}
+
+.cards{display:grid;gap:20px;grid-template-columns:repeat(4,1fr)}
+.cards--3{grid-template-columns:repeat(3,1fr)}.cards--5,.cards--6{grid-template-columns:repeat(3,1fr)}.cards--2{grid-template-columns:1fr 1fr}
+.card{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent);transition:transform .2s}
+.card:hover{transform:translateY(-2px)}
+.card__img{aspect-ratio:4/3;width:100%;object-fit:cover}
+.card__icon{width:64px;height:64px;object-fit:contain;margin:24px 24px 0}
+.card__body{padding:20px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card__body p{margin:0;font-size:16px;opacity:.78}
+.card__cta{margin-top:auto;padding-top:10px;font-weight:600;color:var(--brand-text);text-decoration:none}
+
+.steps{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:22px}
+.steps li{display:flex;gap:18px}
+.num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--dark);display:grid;place-items:center;font-weight:700}
+.steps p{margin:4px 0 0;opacity:.75;font-size:16px}
+.mock{background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+
+.groups{display:grid;gap:28px}
+.group h3{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.group h3 img{width:30px;height:30px;object-fit:contain}
+.group ul{list-style:none;margin:0;padding:0}
+.group li{padding:11px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent)}
+.form{background:#fff;border-radius:20px;padding:32px;display:grid;gap:14px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.form p{margin:0}
+.form__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:grid;gap:6px;font-size:14px;font-weight:500}
+.form input{height:48px;border:1.5px solid color-mix(in srgb,var(--ink) 18%,transparent);border-radius:10px;padding:0 14px;font:16px var(--ft);background:var(--bg)}
+.form .btn{border:0;cursor:pointer;justify-self:start}
+
+.about__img{border-radius:22px;aspect-ratio:4/3.4;object-fit:cover;width:100%}
+.bigfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:36px 0 0}
+.bigfacts dt{font:600 34px/1.1 var(--fd);color:var(--brand-text)}
+.bigfacts dd{margin:6px 0 0;font-size:15px;opacity:.75}
+
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{margin:0;background:#fff;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.quote blockquote{margin:0;font-size:17px;line-height:1.55}
+.quote figcaption{margin-top:auto;font-weight:600;font-size:15px}
+
+
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.logos div{background:#fff;border-radius:14px;height:132px;display:grid;place-items:center;padding:20px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.logos img{max-height:68px;max-width:75%;object-fit:contain}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery img{aspect-ratio:1;object-fit:cover;border-radius:16px;width:100%}
+
+/* close + footer */
+.foot{background:var(--dark);color:#fff;padding:72px 0 32px}
+.close{padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.15)}
+.close h2{font-size:clamp(36px,4.4vw,60px);max-width:18ch}
+.close .lead{opacity:.8;margin-top:16px}
+.foot__cols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding:36px 0;font-size:15px}
+.foot__cols h3{font:600 14px var(--ft);opacity:.6;margin-bottom:12px}
+.foot__cols ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot__brand p{opacity:.75;max-width:36ch}
+.foot .logo{color:#fff}
+.foot .logo img{background:#fff;border-radius:10px;padding:6px}
+.legal{font-size:13px;opacity:.55;margin:0}
+
+@media (max-width:1000px){
+  .split{grid-template-columns:1fr;gap:40px}
+  .cards,.cards--3,.cards--5,.cards--6,.quotes{grid-template-columns:1fr 1fr}
+  .nav nav{display:none}.nav .btn{margin-left:auto}
+  .hero{min-height:0}.hero__bar{grid-template-columns:1fr;gap:28px}
+  .foot__cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 40px)}
+  .hero{padding:56px 0 32px;gap:40px}.sec{padding:64px 0}.foot{padding-top:64px}
+  .hero__marks img{height:68px;max-width:150px}
+  .hero--left .hero__inner,.hero--right .hero__inner{padding:0}
+  .hero--left,.hero--right{padding-top:0}
+  .hero--left .hero__bg,.hero--right .hero__bg{position:relative;inset:auto;z-index:0;height:300px}
+  .hero--left::before,.hero--right::before{display:none}
+  .hero--left::before,.hero--right::before{background:linear-gradient(180deg,color-mix(in srgb,var(--dark) 70%,transparent),color-mix(in srgb,var(--dark) 60%,transparent) 50%,color-mix(in srgb,var(--dark) 90%,transparent))}
+  .cards,.cards--2,.cards--3,.cards--5,.cards--6,.quotes,.logos,.gallery,.form__grid,.bigfacts{grid-template-columns:1fr}
+  .logos{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}
+  .nav .btn{display:none}
+  .facts{gap:24px}
+  .foot__cols{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* the "fix" mock: a small working-looking form */
+.qm{display:grid;gap:14px;font-size:15px}
+.qm__h{font:600 22px var(--fd);margin:0}
+.qm label{display:grid;gap:6px;font-weight:500;font-size:13px;opacity:.9}
+.qm__f{display:flex;align-items:center;height:46px;border:1.5px solid color-mix(in srgb,var(--ink) 15%,transparent);border-radius:10px;padding:0 14px;font-size:15px;font-weight:400}
+.qm__ph{display:flex;gap:8px}.qm__ph img{width:72px;height:72px;object-fit:cover;border-radius:10px}
+.qm__b{display:flex;align-items:center;justify-content:center;height:50px;border-radius:12px;background:var(--brand);color:var(--brand-ink);font-weight:600}
+.qm__r{margin:0;padding:12px 14px;border-radius:10px;background:color-mix(in srgb,var(--brand) 10%,#fff);color:color-mix(in srgb,var(--brand-text) 78%,#000);font-weight:600}
+
+.split--solo{grid-template-columns:1fr}
+.split--solo .lead{max-width:70ch}
+@media (max-width:640px){.facts{grid-template-columns:1fr 1fr}}
+
+/* Google rating: badge in the hero, summary + cards in reviews (like the Holyhead and Prestatyn examples) */
+.g{width:22px;height:22px;flex:none}
+.stars{display:inline-block;font-size:18px;line-height:1;letter-spacing:2px;background:linear-gradient(90deg,#f5b301 var(--r),#d9d9d9 var(--r));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stars::before{content:"★★★★★"}
+.gbadge{display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:12px 18px;background:#fff;border-radius:14px;text-decoration:none;box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.07);font-size:14px}
+.gbadge .g{width:30px;height:30px}
+.gbadge b{display:block;font-size:16px}
+.gbadge em{font-style:normal;font-weight:600}
+.rv__row{display:grid;gap:20px}
+.rv__row--g{grid-template-columns:220px 1fr;align-items:center}
+.rv__sum{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.rv__sum b{font:600 26px var(--fd)}
+.rv__sum .stars{font-size:28px}
+.rv__sum span{font-size:15px}
+.rv__word{display:flex;align-items:center;gap:6px;font-weight:600;font-size:18px!important}
+.rv__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv{margin:0;background:#fff;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.rv__top{display:flex;align-items:center;gap:12px}
+.rv__top>span:nth-child(2){flex:1;display:flex;flex-direction:column}
+.rv__top small{font-size:13px;opacity:.65}
+.rv__av{width:40px;height:40px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:600}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.rv__more{margin-top:auto;font-size:14px;color:inherit}
+.rv__btns{justify-content:center}
+.rv__btns .g{width:18px;height:18px;margin-right:8px}
+@media (max-width:1000px){.rv__row--g{grid-template-columns:1fr}.rv__cards{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.rv__cards{grid-template-columns:1fr}.nav__bar{height:76px}.logo img{max-height:56px}}
+</style></head><body id="top">
+<header class="nav"><div class="wrap nav__bar"><a class="logo" href="#top"><img src="img/logo-mark.png" alt=""><span>Deeside Home Care</span></a><nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#about">About</a><a href="#reviews">Reviews</a></nav><a class="btn btn--primary" href="#how">Ask about care</a></div></header>
+<main><section class="hero"><img class="hero__bg" src="img/office-team-2025.webp" alt="Four members of the Deeside Home Care team in front of the company logo" style="object-position:50% 40%">
+  <div class="wrap hero__inner">
+    <p class="kicker">Shotton · Flintshire</p>
+    <h1>Home care for adults across Deeside</h1>
+    <p class="lead">A family-run team helping adults and older people keep living independently at home, with a care plan tailored to each person. Visits from 8am to 10pm, 365 days a year.</p>
+    <div class="btns"><a class="btn btn--primary" href="#how">Ask about care</a><a class="btn btn--ghost" href="#services">See our services</a></div>
+    
+  </div>
+  <div class="wrap hero__bar"><ul class="facts"><li><b>2012</b><span>family run since</span></li><li><b>8am–10pm</b><span>365 days a year</span></li><li><b>Top 20</b><span>Wales award, 4 years running</span></li></ul><div class="hero__card"><span class="eyebrow">After 5pm</span><b>Ask about care tonight</b><span class="muted">Pick a time for us to ring you back and get a reply straight away.</span><a href="#how">Try it →</a></div></div>
+</section><section class="sec" id="services"><div class="wrap"><h2>Help at home, tailored to each person. <span class="muted">On a regular or one-off basis.</span></h2><div class="cards cards--4"><article class="card card--photo"><img class="card__img" src="img/card-slide15.jpg" alt="A carer holding an older woman&#x27;s hands as they talk" loading="lazy"><div class="card__body"><h3>Personal care and hygiene</h3><p>Personal care given with dignity, and you can choose the gender of the carer who helps you.</p><a class="card__cta" href="#how">Ask about care →</a></div></article><article class="card card--photo"><img class="card__img" src="img/card-bg2.jpg" alt="A carer handing an older man a glass of water" loading="lazy"><div class="card__body"><h3>Medication, meals and drinks</h3><p>Safe medication administration, light meals, snacks and drinks, and help with special diets.</p><a class="card__cta" href="#how">Ask about care →</a></div></article><article class="card card--photo"><img class="card__img" src="img/card-bg6.jpg" alt="A carer steadying an older woman as she walks" loading="lazy"><div class="card__body"><h3>Safe moving and re-positioning</h3><p>Support to move safely, backed by risk assessments that are regularly reviewed.</p><a class="card__cta" href="#how">Ask about care →</a></div></article><article class="card card--photo"><img class="card__img" src="img/card-slide7.jpg" alt="An older man smiling as he chats with a carer on his sofa" loading="lazy"><div class="card__body"><h3>Cleaning, laundry and company</h3><p>Domestic cleaning and laundry, and time to chat for anyone feeling isolated.</p><a class="card__cta" href="#how">Ask about care →</a></div></article></div></div></section><section class="sec sec--dark" id="how"><div class="wrap split">
+  <div><h2>Ask about care at any hour. <span class="muted">And know straight away when we&#x27;ll ring you back.</span></h2><ol class="steps"><li><span class="num">1</span><div><h3>Tell us who needs care</h3><p>Who it&#x27;s for, where they live and the help they need. Any time, from your phone.</p></div></li><li><span class="num">2</span><div><h3>See if we cover your area</h3><p>The form knows our areas, from Queensferry to Connah&#x27;s Quay. Outside them, we&#x27;ll still ring to see if we can help.</p></div></li><li><span class="num">3</span><div><h3>Pick a time for us to ring</h3><p>Choose a call-back time in office hours and get a reply with it straight away, even late in the evening.</p></div></li></ol><a class="btn btn--light" href="#contact">Ask about care</a></div>
+  <div class="mock"><div class='qm'><p class='qm__h'>Ask about care</p><label>Who is the care for?<span class='qm__f'>My dad</span></label><label>Where does he live?<span class='qm__f'>Hawarden</span></label><label>What help does he need?<span class='qm__f'>Morning visits, meals and medication</span></label><label>When should we ring you?<span class='qm__f'>Tomorrow, 9:30am</span></label><span class='qm__b'>Send</span><p class='qm__r'>✓ Sent at 7:42pm. Hawarden is in our area. We'll ring you tomorrow at 9:30am.</p></div></div>
+</div></section><section class="sec" id="about"><div class="wrap split split--top"><div><h2>A family-run team, here since 2012.</h2><p class="lead">Natalie founded Deeside Home Care in 2012 as an extension of the family care business, and runs it with Jacqui, who managed care homes across North Wales and Cheshire for 40 years. We&#x27;re registered with Care Inspectorate Wales, and every member of staff has an enhanced DBS check before they start.</p><dl class="bigfacts"><div><dt>8</dt><dd>towns and villages we cover</dd></div><div><dt>40 years</dt><dd>of Jacqui running care homes</dd></div><div><dt>CIW</dt><dd>registered with Care Inspectorate Wales</dd></div></dl></div><div><img class="about__img" src="img/deeside-home-care-team-2025.webp" alt="The Deeside Home Care team with their homecare.co.uk Top 20 award certificate" loading="lazy"></div></div></section><section class="sec sec--alt" id="reviews"><div class="wrap"><h2>What families say. <span class="muted">Reviews from homecare.co.uk.</span></h2><div class="rv__row"><div class="rv__cards"><figure class="rv"><div class="rv__top"><span class="rv__av">N</span><span><b>N. G.</b><small>homecare.co.uk review</small></span></div><blockquote>“From initially contacting Deeside Homecare regarding support for my dad everyone I have dealt with has been helpful and supportive.”</blockquote></figure><figure class="rv"><div class="rv__top"><span class="rv__av">S</span><span><b>Sheena C.</b><small>homecare.co.uk review</small></span></div><blockquote>“Prior to the package starting, they took the time to get to know Dad and his needs. Dad feels safe and happy in his home again!”</blockquote></figure><figure class="rv"><div class="rv__top"><span class="rv__av">A</span><span><b>A. C.</b><small>homecare.co.uk review</small></span></div><blockquote>“Nothing to fault, the carers will bend over backwards for you. They treat me with great care and dignity, I would recommend them to anybody.”</blockquote></figure></div></div></div></section></main><footer class="foot" id="contact"><div class="wrap">
+  <div class="close"><h2>Talk to us about care at home.</h2><p class="lead">We cover Queensferry, Hawarden, Ewloe, Aston, Mancot, Higher Shotton, Shotton and Connah&#x27;s Quay. The office is open Monday to Friday, 9am to 5pm.</p><div class="btns"><a class="btn btn--light" href="#how">Ask about care</a><a class="btn btn--ghost" href="tel:01244812435">Call 01244 812435</a></div></div>
+  <div class="foot__cols"><div class="foot__brand"><a class="logo" href="#top"><img src="img/logo-mark.png" alt=""><span>Deeside Home Care</span></a><p>Family-run home care for adults and older people across Deeside, Flintshire. Registered with Care Inspectorate Wales.</p></div><div><h3>Services</h3><ul><li>Personal care</li><li>Medication support</li><li>Meals and special diets</li><li>Safe moving</li><li>Cleaning and laundry</li></ul></div><div><h3>Areas</h3><ul><li>Shotton</li><li>Connah&#x27;s Quay</li><li>Queensferry</li><li>Hawarden</li><li>Ewloe, Aston and Mancot</li></ul></div><div><h3>Contact</h3><ul><li>01244 812435</li><li>Mon–Fri, 9am–5pm</li><li>54 Chester Rd West</li><li>Shotton, CH5 1BY</li></ul></div></div>
+  <p class="legal">© 2026 Deeside Home Care Ltd · Example homepage made by Tomoni</p>
+</div></footer>
+</body></html>

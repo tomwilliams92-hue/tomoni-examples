@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Home and Cruise: holiday cottages and cruises in Beaumaris</title><meta name="description" content="Five pet-friendly self-catering cottages and apartments at Penmon and in Beaumaris, booked direct with the owners, plus a free cruise booking service.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--brand:#3b64a6;--brand-ink:#ffffff;--brand-text:#3b64a6;--accent:#dca77e;--dark:#0f1b2e;--bg:#f9f8f5;--alt:#edf1f6;--ink:#141c2b;--fd:"Fraunces",Georgia,serif;--ft:"Figtree",system-ui,sans-serif}
+/* Tomoni master template. Colours and fonts come from each business (render.py :root). */
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--ft);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(100% - 64px,1200px);margin:0 auto}
+h1,h2,h3{font-family:var(--fd);font-weight:600;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,5.2vw,72px);line-height:1.02}
+h2{font-size:clamp(30px,3.4vw,46px);line-height:1.08;max-width:22ch}
+h3{font-size:21px;line-height:1.25}
+.muted{color:color-mix(in srgb,currentColor 58%,transparent)}
+h2 .muted{display:inline}
+.lead{font-size:19px;line-height:1.55;max-width:56ch}
+.kicker,.eyebrow{font:600 14px/1.3 var(--ft);letter-spacing:.02em;color:var(--brand-text);margin:0 0 18px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;height:52px;padding:0 24px;border-radius:12px;font:600 16px var(--ft);text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn--primary{background:var(--brand);color:var(--brand-ink)}
+.btn--secondary{border:1.5px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+.btn--light{background:#fff;color:var(--dark)}
+.btn--ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px)}
+.nav__bar{display:flex;align-items:center;gap:32px;height:96px}
+.nav nav{display:flex;gap:28px;margin-left:auto;font-weight:500;font-size:15px}
+.nav nav a{text-decoration:none;opacity:.8}.nav nav a:hover{opacity:1}
+.nav .btn{height:44px;font-size:15px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:600 24px var(--fd)}
+.logo img{width:auto;max-height:76px}
+.logo span{white-space:nowrap}
+
+/* hero: full width like withtomoni.com (Tom, 20.11.2026). Their photo under a dark brand-tinted
+   overlay, white centred text; facts and the "big change" card along the bottom. Fills the first
+   desktop screen under the nav, so the email picture is all hero. */
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:var(--dark);min-height:min(804px,calc(100svh - 96px));display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:64px 0 32px}
+.hero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 55% 50% at 50% 42%,color-mix(in srgb,var(--dark) 45%,transparent),transparent 75%),linear-gradient(180deg,color-mix(in srgb,var(--dark) 58%,transparent),color-mix(in srgb,var(--dark) 44%,transparent) 45%,color-mix(in srgb,var(--dark) 88%,transparent))}
+.hero--marks::before{background:radial-gradient(ellipse 85% 75% at 50% 0%,color-mix(in srgb,var(--brand) 75%,transparent),transparent 72%)}
+.hero__inner{display:flex;flex-direction:column;align-items:center;text-align:center;margin-block:auto}
+/* hero.align left/right: when the photo's subject sits on one side, the text takes the other half */
+.hero--left .hero__inner,.hero--right .hero__inner{align-items:flex-start;text-align:left}
+.hero--left .hero__inner{padding-right:44%}.hero--right .hero__inner{padding-left:52%}
+.hero--left .lead,.hero--right .lead{max-width:46ch}
+.hero--left .btns,.hero--right .btns{justify-content:flex-start}
+.hero--left::before{background:linear-gradient(90deg,color-mix(in srgb,var(--dark) 86%,transparent),color-mix(in srgb,var(--dark) 55%,transparent) 50%,color-mix(in srgb,var(--dark) 10%,transparent)),linear-gradient(180deg,transparent 62%,color-mix(in srgb,var(--dark) 85%,transparent))}
+.hero--right::before{background:linear-gradient(270deg,color-mix(in srgb,var(--dark) 86%,transparent),color-mix(in srgb,var(--dark) 55%,transparent) 50%,color-mix(in srgb,var(--dark) 10%,transparent)),linear-gradient(180deg,transparent 62%,color-mix(in srgb,var(--dark) 85%,transparent))}
+.hero .kicker{color:#fff;opacity:.85}
+.hero h1{font-size:clamp(40px,4.6vw,64px);max-width:20ch;margin-bottom:18px;text-shadow:0 2px 28px rgba(0,0,0,.3)}
+.hero .lead{margin:0;max-width:60ch;opacity:.94;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero .btns{justify-content:center}
+.hero .btn--ghost{border:2px solid #fff;background:rgba(255,255,255,.12)}
+.hero .gbadge{color:var(--ink);margin-top:24px}
+.hero--marks{padding-top:44px;gap:32px}
+.hero__marks{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:24px}
+.hero__marks img{height:88px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:14px;padding:10px}
+.hero__bar{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:end}
+.facts{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:48px}
+.facts li{display:flex;flex-direction:column}
+.facts b{font:600 30px/1.1 var(--fd);letter-spacing:-.02em}
+.facts span{font-size:14px;opacity:.75}
+.hero__card{color:var(--ink);background:#fff;border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;box-shadow:0 12px 32px rgba(0,0,0,.25);font-size:15px}
+.hero__card .eyebrow{margin:0 0 4px;font-size:13px}
+.hero__card b{font:600 18px/1.3 var(--ft)}
+.hero__card a{margin-top:8px;font-weight:600;color:var(--brand-text);text-decoration:none}
+
+/* sections: as tall as their content */
+.sec{padding:72px 0}
+.sec h2{margin-bottom:32px}
+.sec--alt{background:var(--alt)}
+.sec--dark{background:var(--dark);color:#fff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split--top{align-items:start}
+
+.cards{display:grid;gap:20px;grid-template-columns:repeat(4,1fr)}
+.cards--3{grid-template-columns:repeat(3,1fr)}.cards--5,.cards--6{grid-template-columns:repeat(3,1fr)}.cards--2{grid-template-columns:1fr 1fr}
+.card{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent);transition:transform .2s}
+.card:hover{transform:translateY(-2px)}
+.card__img{aspect-ratio:4/3;width:100%;object-fit:cover}
+.card__icon{width:64px;height:64px;object-fit:contain;margin:24px 24px 0}
+.card__body{padding:20px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card__body p{margin:0;font-size:16px;opacity:.78}
+.card__cta{margin-top:auto;padding-top:10px;font-weight:600;color:var(--brand-text);text-decoration:none}
+
+.steps{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:22px}
+.steps li{display:flex;gap:18px}
+.num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--dark);display:grid;place-items:center;font-weight:700}
+.steps p{margin:4px 0 0;opacity:.75;font-size:16px}
+.mock{background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+
+.groups{display:grid;gap:28px}
+.group h3{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.group h3 img{width:30px;height:30px;object-fit:contain}
+.group ul{list-style:none;margin:0;padding:0}
+.group li{padding:11px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent)}
+.form{background:#fff;border-radius:20px;padding:32px;display:grid;gap:14px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.form p{margin:0}
+.form__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:grid;gap:6px;font-size:14px;font-weight:500}
+.form input{height:48px;border:1.5px solid color-mix(in srgb,var(--ink) 18%,transparent);border-radius:10px;padding:0 14px;font:16px var(--ft);background:var(--bg)}
+.form .btn{border:0;cursor:pointer;justify-self:start}
+
+.about__img{border-radius:22px;aspect-ratio:4/3.4;object-fit:cover;width:100%}
+.bigfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:36px 0 0}
+.bigfacts dt{font:600 34px/1.1 var(--fd);color:var(--brand-text)}
+.bigfacts dd{margin:6px 0 0;font-size:15px;opacity:.75}
+
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{margin:0;background:#fff;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.quote blockquote{margin:0;font-size:17px;line-height:1.55}
+.quote figcaption{margin-top:auto;font-weight:600;font-size:15px}
+
+
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.logos div{background:#fff;border-radius:14px;height:132px;display:grid;place-items:center;padding:20px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.logos img{max-height:68px;max-width:75%;object-fit:contain}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery img{aspect-ratio:1;object-fit:cover;border-radius:16px;width:100%}
+
+/* close + footer */
+.foot{background:var(--dark);color:#fff;padding:72px 0 32px}
+.close{padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.15)}
+.close h2{font-size:clamp(36px,4.4vw,60px);max-width:18ch}
+.close .lead{opacity:.8;margin-top:16px}
+.foot__cols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding:36px 0;font-size:15px}
+.foot__cols h3{font:600 14px var(--ft);opacity:.6;margin-bottom:12px}
+.foot__cols ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot__brand p{opacity:.75;max-width:36ch}
+.foot .logo{color:#fff}
+.foot .logo img{background:#fff;border-radius:10px;padding:6px}
+.legal{font-size:13px;opacity:.55;margin:0}
+
+@media (max-width:1000px){
+  .split{grid-template-columns:1fr;gap:40px}
+  .cards,.cards--3,.cards--5,.cards--6,.quotes{grid-template-columns:1fr 1fr}
+  .nav nav{display:none}.nav .btn{margin-left:auto}
+  .hero{min-height:0}.hero__bar{grid-template-columns:1fr;gap:28px}
+  .foot__cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 40px)}
+  .hero{padding:56px 0 32px;gap:40px}.sec{padding:64px 0}.foot{padding-top:64px}
+  .hero__marks img{height:68px;max-width:150px}
+  .hero--left .hero__inner,.hero--right .hero__inner{padding:0}
+  .hero--left,.hero--right{padding-top:0}
+  .hero--left .hero__bg,.hero--right .hero__bg{position:relative;inset:auto;z-index:0;height:300px}
+  .hero--left::before,.hero--right::before{display:none}
+  .hero--left::before,.hero--right::before{background:linear-gradient(180deg,color-mix(in srgb,var(--dark) 70%,transparent),color-mix(in srgb,var(--dark) 60%,transparent) 50%,color-mix(in srgb,var(--dark) 90%,transparent))}
+  .cards,.cards--2,.cards--3,.cards--5,.cards--6,.quotes,.logos,.gallery,.form__grid,.bigfacts{grid-template-columns:1fr}
+  .logos{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}
+  .nav .btn{display:none}
+  .facts{gap:24px}
+  .foot__cols{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* the "fix" mock: a small working-looking form */
+.qm{display:grid;gap:14px;font-size:15px}
+.qm__h{font:600 22px var(--fd);margin:0}
+.qm label{display:grid;gap:6px;font-weight:500;font-size:13px;opacity:.9}
+.qm__f{display:flex;align-items:center;height:46px;border:1.5px solid color-mix(in srgb,var(--ink) 15%,transparent);border-radius:10px;padding:0 14px;font-size:15px;font-weight:400}
+.qm__ph{display:flex;gap:8px}.qm__ph img{width:72px;height:72px;object-fit:cover;border-radius:10px}
+.qm__b{display:flex;align-items:center;justify-content:center;height:50px;border-radius:12px;background:var(--brand);color:var(--brand-ink);font-weight:600}
+.qm__r{margin:0;padding:12px 14px;border-radius:10px;background:color-mix(in srgb,var(--brand) 10%,#fff);color:color-mix(in srgb,var(--brand-text) 78%,#000);font-weight:600}
+
+.split--solo{grid-template-columns:1fr}
+.split--solo .lead{max-width:70ch}
+@media (max-width:640px){.facts{grid-template-columns:1fr 1fr}}
+
+/* Google rating: badge in the hero, summary + cards in reviews (like the Holyhead and Prestatyn examples) */
+.g{width:22px;height:22px;flex:none}
+.stars{display:inline-block;font-size:18px;line-height:1;letter-spacing:2px;background:linear-gradient(90deg,#f5b301 var(--r),#d9d9d9 var(--r));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stars::before{content:"★★★★★"}
+.gbadge{display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:12px 18px;background:#fff;border-radius:14px;text-decoration:none;box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.07);font-size:14px}
+.gbadge .g{width:30px;height:30px}
+.gbadge b{display:block;font-size:16px}
+.gbadge em{font-style:normal;font-weight:600}
+.rv__row{display:grid;gap:20px}
+.rv__row--g{grid-template-columns:220px 1fr;align-items:center}
+.rv__sum{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.rv__sum b{font:600 26px var(--fd)}
+.rv__sum .stars{font-size:28px}
+.rv__sum span{font-size:15px}
+.rv__word{display:flex;align-items:center;gap:6px;font-weight:600;font-size:18px!important}
+.rv__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv{margin:0;background:#fff;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px;border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.rv__top{display:flex;align-items:center;gap:12px}
+.rv__top>span:nth-child(2){flex:1;display:flex;flex-direction:column}
+.rv__top small{font-size:13px;opacity:.65}
+.rv__av{width:40px;height:40px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:600}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.rv__more{margin-top:auto;font-size:14px;color:inherit}
+.rv__btns{justify-content:center}
+.rv__btns .g{width:18px;height:18px;margin-right:8px}
+@media (max-width:1000px){.rv__row--g{grid-template-columns:1fr}.rv__cards{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.rv__cards{grid-template-columns:1fr}.nav__bar{height:76px}.logo img{max-height:56px}}
+</style></head><body id="top">
+<header class="nav"><div class="wrap nav__bar"><a class="logo" href="#top"><span>Home and Cruise</span></a><nav><a href="#cottages">Cottages</a><a href="#how">Dates and prices</a><a href="#reviews">Reviews</a><a href="#about">About</a></nav><a class="btn btn--primary" href="#how">Check dates and prices</a></div></header>
+<main><section class="hero"><img class="hero__bg" src="img/view-menai-strait.jpg" alt="The view from the field at Tyddyn Crwn over the sea to the Snowdonia mountains" style="object-position:50% 50%">
+  <div class="wrap hero__inner">
+    <p class="kicker">Beaumaris · Isle of Anglesey</p>
+    <h1>Pet-friendly holiday cottages in and around Beaumaris</h1>
+    <p class="lead">Three homes at Penmon with views over the sea to Snowdonia, and two apartments in Beaumaris by the Castle. Book direct with the owners: no agency fees and no VAT.</p>
+    <div class="btns"><a class="btn btn--primary" href="#how">Check dates and prices</a><a class="btn btn--ghost" href="#cottages">See the cottages</a></div>
+    
+  </div>
+  <div class="wrap hero__bar"><ul class="facts"><li><b>35th year</b><span>of holiday letting</span></li><li><b>5</b><span>cottages and apartments</span></li><li><b>No VAT</b><span>and no agency fees</span></li></ul><div class="hero__card"><span class="eyebrow">Book direct</span><b>See free dates and your price</b><span class="muted">Pick a cottage and your dates, see the total, then reserve with the deposit.</span><a href="#how">Try it →</a></div></div>
+</section><section class="sec" id="cottages"><div class="wrap"><h2>Five places to stay, and cruises too. <span class="muted">Pets welcome at every property.</span></h2><div class="cards cards--6"><article class="card card--photo"><img class="card__img" src="img/llinos-lounge.jpg" alt="The lounge at Llinos Cottage with an open fire and a window looking out to sea" loading="lazy"><div class="card__body"><h3>Llinos Cottage</h3><p>Sleeps up to 5. A two-bedroom cottage at Penmon with sea and mountain views from every room, a real fire and an enclosed garden.</p><a class="card__cta" href="#how">Check dates →</a></div></article><article class="card card--photo"><img class="card__img" src="img/tyddyn-crwn.jpg" alt="Tyddyn Crwn Country-house at Penmon, a large white house beside open fields" loading="lazy"><div class="card__body"><h3>Tyddyn Crwn ground floor</h3><p>Sleeps up to 7. A large lounge and sun lounge with sea and mountain views, a big rear garden and a BBQ area.</p><a class="card__cta" href="#how">Check dates →</a></div></article><article class="card card--photo"><img class="card__img" src="img/tyddyn-first-floor-lounge.jpg" alt="The lounge in the Tyddyn Crwn first floor apartment" loading="lazy"><div class="card__body"><h3>Tyddyn Crwn first floor</h3><p>Sleeps up to 6. Its own entrance, parking and garden with panoramic views. Book both floors and sleep up to 13.</p><a class="card__cta" href="#how">Check dates →</a></div></article><article class="card card--photo"><img class="card__img" src="img/castle-square-one-garden.jpg" alt="The private lawn and parking behind Castle Square Apartment One in Beaumaris" loading="lazy"><div class="card__body"><h3>Castle Square Apartment One</h3><p>Sleeps up to 7. In the heart of Beaumaris, some 500 feet from the Castle, with parking for three cars and a lawn with a picnic table.</p><a class="card__cta" href="#how">Check dates →</a></div></article><article class="card card--photo"><img class="card__img" src="img/castle-square-two-lounge.jpg" alt="The lounge in Castle Square Apartment Two" loading="lazy"><div class="card__body"><h3>Castle Square Apartment Two</h3><p>Sleeps up to 6. A spacious first-floor apartment on Castle Street, a few minutes&#x27; walk from the seafront and the pier.</p><a class="card__cta" href="#how">Check dates →</a></div></article><article class="card card--photo"><img class="card__img" src="img/cruise-ship.jpg" alt="A cruise ship at sea, seen from above" loading="lazy"><div class="card__body"><h3>Cruise holidays</h3><p>The Mediterranean, Norway, the Caribbean and further afield, found for you at our Castle Street office. Our cruise service is free.</p><a class="card__cta" href="#contact">Book a free appointment →</a></div></article></div></div></section><section class="sec sec--dark" id="how"><div class="wrap split">
+  <div><h2>See free dates and your price straight away. <span class="muted">Then reserve with the deposit.</span></h2><ol class="steps"><li><span class="num">1</span><div><h3>Pick a cottage and your dates</h3><p>The calendar shows which nights are free at each property, and the shortest stay for those dates.</p></div></li><li><span class="num">2</span><div><h3>See what your stay costs</h3><p>Your total appears as you choose, at our own rates, with no agency fees and no VAT.</p></div></li><li><span class="num">3</span><div><h3>Reserve with the deposit</h3><p>Pay £280 a week, or £40 a night for short breaks, by card. We remind you when the balance is due, eight weeks before you arrive.</p></div></li></ol><a class="btn btn--light" href="#contact">Check dates and prices</a></div>
+  <div class="mock"><div class='qm'><p class='qm__h'>Llinos Cottage · sleeps 5</p><label>Your dates<span class='qm__f'>Sat 10 to Sat 17 July 2027</span></label><label>Availability<span class='qm__f'>✓ All 7 nights free</span></label><label>Your price<span class='qm__f'>£180 a night · £1,260 for 7 nights</span></label><span class='qm__b'>Reserve with a £280 deposit</span><p class='qm__r'>✓ Reserved. Balance of £980 due 15 May 2027, and we'll remind you.</p></div></div>
+</div></section><section class="sec" id="about"><div class="wrap split split--top"><div><h2>You book with us, the owners.</h2><p class="lead">There&#x27;s no agency in between, so there are no agency fees, and as a small business we don&#x27;t charge VAT either. This is our 35th year of letting holiday homes all year round. From the same office on Castle Street, Howard Roberts and Sarah Myers book cruises too.</p><dl class="bigfacts"><div><dt>38 years</dt><dd>of cruise experience between us</dd></div><div><dt>4</dt><dd>properties with their own EV charger</dd></div><div><dt>8 min</dt><dd>walk to a sandy beach from Llinos Cottage</dd></div></dl></div><div><img class="about__img" src="img/office-castle-street.jpg" alt="The Home and Cruise office at 1 Castle Street, Beaumaris" loading="lazy"></div></div></section><section class="sec sec--alt" id="reviews"><div class="wrap"><h2>What guests say about Llinos Cottage.</h2><div class="rv__row"><div class="rv__cards"><figure class="rv"><div class="rv__top"><span class="rv__av">S</span><span><b>Simon Burton</b><small>Google review, Llinos Cottage</small></span></div><blockquote>“Inside the cottage was spotlessly clean … probably our favourite holiday cottage we have ever stayed in, and we will definitely be back next year!”</blockquote></figure><figure class="rv"><div class="rv__top"><span class="rv__av">A</span><span><b>Avril Carrick</b><small>Google review, Llinos Cottage</small></span></div><blockquote>“Love the cottage and we&#x27;ve been going there for nearly 24 years so it must be good”</blockquote></figure><figure class="rv"><div class="rv__top"><span class="rv__av">I</span><span><b>Ian Smart</b><small>Google review, Llinos Cottage</small></span></div><blockquote>“So good. Wonderful place to stay. They even put up a Christmas tree for us!!!!”</blockquote></figure></div></div></div></section></main><footer class="foot" id="contact"><div class="wrap">
+  <div class="close"><h2>Check your dates and book direct.</h2><p class="lead">Lowest price at time of booking, guaranteed when you book with us, the owners.</p><div class="btns"><a class="btn btn--light" href="#how">Check dates and prices</a><a class="btn btn--ghost" href="tel:01248811671">Call 01248 811671</a></div></div>
+  <div class="foot__cols"><div class="foot__brand"><a class="logo" href="#top"><span>Home and Cruise</span></a><p>Self-catering cottages and apartments at Penmon and in Beaumaris, and cruise holidays booked from our office on Castle Street.</p></div><div><h3>Places to stay</h3><ul><li>Llinos Cottage</li><li>Tyddyn Crwn Country-house</li><li>Castle Square Apartments</li></ul></div><div><h3>Office</h3><ul><li>1 Castle Street, Beaumaris</li><li>Anglesey LL58 8AP</li><li>Tuesday and Saturday, 9am to 5pm</li></ul></div><div><h3>Contact</h3><ul><li>01248 811671</li><li>howard@homeandcruise.com</li><li>cruise@homeandcruise.com</li></ul></div></div>
+  <p class="legal">© 2026 Home and Cruise Limited · Example homepage made by Tomoni</p>
+</div></footer>
+</body></html>
